@@ -3,8 +3,8 @@
 #!/usr/bin/env python3
 from decimal import Decimal, getcontext
 
-a = int(input("Enter the value of a in your linear equation: "))
-b = int(input("Enter the value of b in your linear equation: "))
+a = Decimal(input("Enter the value of a in your linear equation: "))
+b = Decimal(input("Enter the value of b in your linear equation: "))
 factor = -(b/a)
 print("The root of that linear equation is", factor)
 print()
