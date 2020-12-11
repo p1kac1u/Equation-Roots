@@ -1,5 +1,3 @@
-# try it on repl.it: https://repl.it/@p1kac1u/Equation-Roots#Linear_Equation.py
-
 #!/usr/bin/env python3
 from decimal import Decimal, getcontext
 
