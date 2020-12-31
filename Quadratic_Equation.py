@@ -1,11 +1,10 @@
-#!/usr/bin/env python3
-
+from decimal import Decimal, getcontext
 import math
 
 # Obtaining quadratic equation information from the user
-a = int(input("Enter the value of the coefficient a in your quadratic eqaution: "))
-b = int(input("Enter the value of the coefficient b in your quadratic eqaution: "))
-c = int(input("Enter the value of the coefficient c in your quadratic eqaution: "))
+a = Decimal(input("Enter the value of the coefficient a in your quadratic eqaution: "))
+b = Decimal(input("Enter the value of the coefficient b in your quadratic eqaution: "))
+c = Decimal(input("Enter the value of the coefficient c in your quadratic eqaution: "))
 
 # Defining a function for calculating the roots
 def quadraticsolver(a,b,c):
@@ -14,14 +13,31 @@ def quadraticsolver(a,b,c):
     
     # Checking the condition of the discriminant
     if dis >= 0:
-        print("The first root is", (-b + sqrt_dis) / (2 * a))
-        print("The second root is", (-b - sqrt_dis) / (2 * a))
+        root_1 = (-b + sqrt_dis) / (2 * a)
+        root_2 = (-b - sqrt_dis) / (2 * a)
+        print("The first root is", root_1)
+        print("The second root is", root_2)
     elif dis < 0:
-        print("The first root is", (-b + sqrt_dis) / (2 * a), "i")
-        print("The second root is", (-b - sqrt_dis) / (2 * a), "i")
+        root_1 = (-b + sqrt_dis) / (2 * a)
+        root_2 = (-b - sqrt_dis) / (2 * a)
+        print("The first root is", root_1, "i")
+        print("The second root is", root_2, "i")
+    
+    # More Decimal digits
+    print()
+    print("Do you want more decimal digits of your root? (Y/N)")
+    choice = input()
+    
+    if choice == "Y":
+        print("How many digits of the root you want? ")
+        nd = int(input())
+        getcontext().prec = nd + 1
+        print(Decimal(root_1))
+        print(Decimal(root_2))
+    elif choice == "N":
+        print("Have a nice day. Goodbye")
+    elif choice == ""
 if a == 0:
     print("The quadratic equation that you have entered is incorrect. Please try again.")
 else:
     quadraticsolver(a,b,c)
-
-print("Have a nice day. Goodbye"
