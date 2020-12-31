@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import math
 
 # Obtaining quadratic equation information from the user
@@ -21,3 +23,5 @@ if a == 0:
     print("The quadratic equation that you have entered is incorrect. Please try again.")
 else:
     quadraticsolver(a,b,c)
+
+print("Have a nice day. Goodbye"
