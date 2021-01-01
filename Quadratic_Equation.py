@@ -4,7 +4,7 @@ import math
 # Obtaining quadratic equation information from the user
 a = Decimal(input("Enter the value of the coefficient a in your quadratic eqaution: "))
 b = Decimal(input("Enter the value of the coefficient b in your quadratic eqaution: "))
-c = Decimal(input("Enter the value of the coefficient c in your quadratic eqaution: "))
+c = Decimal(input("Enter the value of the constant c in your quadratic eqaution: "))
 
 # Defining a function for calculating the roots
 def quadraticsolver(a,b,c):
